@@ -1,0 +1,17 @@
+---
+dns_records:
+  - name: mikrotik.home.lab
+    address: 192.168.1.2
+    tls_enabled: true
+  - name: vault.home.lab
+    address: 192.168.1.50
+    tls_enabled: true
+  - name: nas.home.lab
+    address: 192.168.1.5
+    tls_enabled: false
+  - name: proxmox.home.lab
+    address: 192.168.1.3
+    tls_enabled: true
+  - name: monitoring.home.lab
+    address: 192.168.1.45
+    tls_enabled: true

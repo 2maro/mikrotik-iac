@@ -1,0 +1,45 @@
+*.json
+# Ignore Packer files
+*.pkr.hcl
+*.pkr.json
+packer_cache/
+packer.log
+
+# Ignore Ansible-related files
+*.retry
+*.vault
+*.key
+*.yml.bak
+*.yaml.bak
+roles/**/vars/*.vault
+roles/**/vars/*.key
+
+# Ignore Terraform local files
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.backup
+*.tfplan
+*.log
+
+# Ignore Terraform sensitive variable files
+*.tfvars
+*.tfvars.json
+
+# Ignore Terraform generated files in modules
+modules/**/.terraform/
+modules/**/.terraform.lock.hcl
+
+# Ignore IDE/editor files (optional)
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore other common log or temp files
+*.log
+*.bak
