@@ -1,54 +1,44 @@
 variable "mikrotik_host" {
-  type = string
+  description = "MikroTik Router API endpoint"
+  type        = string
+  default     = "api://192.168.1.2:8728"
 }
 
 variable "mikrotik_user" {
-  type    = string
-  default = "admin"
+  description = "MikroTik admin username"
+  type        = string
 }
 
 variable "mikrotik_password" {
-  type      = string
-  sensitive = true
-}
-
-variable "vault_token" {
-  description = "Vault token"
+  description = "MikroTik admin password"
   type        = string
   sensitive   = true
-}
-
-variable "nox_mac_address" {
-  description = "MAC address of builder PC"
-  type        = string
-}
-variable "valaria_mac_address" {
-  description = "MAC address of Valaria PC"
-  type        = string
 }
 
 variable "snmp_auth_password" {
   description = "SNMP authentication password"
   type        = string
   sensitive   = true
-  default     = "snmp-auth-password"
 }
 
 variable "snmp_priv_password" {
   description = "SNMP privacy password"
   type        = string
   sensitive   = true
-  default     = "snmp-priv-password"
 }
 
-variable "ssh_user" {
-  description = " Username for ssh connection"
+variable "valaria_mac_address" {
+  description = "MAC address of Valaria PC"
   type        = string
-  default     = "root"
 }
 
-variable "ssh_key_path" {
-  description = "Path for ssh key"
+variable "nox_mac_address" {
+  description = "MAC address of NOX PC"
   type        = string
-  default     = "~/.ssh/id_rsa"
+}
+
+variable "k8s_domain" {
+  description = "Domain for Kubernetes services (future external-dns use)"
+  type        = string
+  default     = "k8s.home.lab"
 }
