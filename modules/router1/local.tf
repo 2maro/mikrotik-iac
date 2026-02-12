@@ -17,15 +17,15 @@ locals {
 
   # Static DNS Records
   static_dns = {
-    "mikrotik.home.lab"   = { address = "192.168.1.2", type = "A", comment = "RouterOS CRS112", tls_enabled = true },
-    "proxmox.home.lab"    = { address = "192.168.1.3", type = "A", comment = "Proxmox Host", tls_enabled = true },
+    "mikrotik.home.lab"   = { address = "192.168.1.119", type = "A", comment = "RouterOS CRS112", tls_enabled = true },
+    "proxmox.home.lab"    = { address = "192.168.1.119", type = "A", comment = "Proxmox Host", tls_enabled = true },
     "leith.home.lab"      = { address = "192.168.1.21", type = "A", comment = "Proxmox Host", tls_enabled = false },
     "builder.home.lab"    = { address = "192.168.1.22", type = "A", comment = "Proxmox Host", tls_enabled = false },
-    "vault.home.lab"      = { address = "192.168.1.48", type = "A", comment = "Vault Server", tls_enabled = true },
+    "vault.home.lab"      = { address = "192.168.1.119", type = "A", comment = "Vault Server", tls_enabled = true },
     "storage.home.lab"    = { address = "192.168.1.118", type = "A", comment = "Storage Server", tls_enabled = false },
-    "cicd.home.lab"       = { address = "192.168.1.121", type = "A", comment = "CI/CD Runner", tls_enabled = true },
+    "cicd.home.lab"       = { address = "192.168.1.119", type = "A", comment = "CI/CD Runner", tls_enabled = true },
     "netforge.home.lab"   = { address = "192.168.1.119", type = "A", comment = "Traefik Proxy", tls_enabled = true },
-    "monitoring.home.lab" = { address = "192.168.1.116", type = "A", comment = "Grafana / Prometheus", tls_enabled = true },
+    "monitoring.home.lab" = { address = "192.168.1.119", type = "A", comment = "Grafana / Prometheus", tls_enabled = true },
     "master-1.home.lab"   = { address = "192.168.1.113", type = "A", comment = "K8s Master Node", tls_enabled = false },
     "worker-1.home.lab"   = { address = "192.168.1.117", type = "A", comment = "K8s Worker Node 1", tls_enabled = false },
     "worker-2.home.lab"   = { address = "192.168.1.112", type = "A", comment = "K8s Worker Node 2", tls_enabled = false }

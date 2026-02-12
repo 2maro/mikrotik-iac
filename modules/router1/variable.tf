@@ -36,3 +36,9 @@ variable "nox_mac_address" {
   description = "MAC address of NOX PC"
   type        = string
 }
+
+variable "k8s_domain" {
+  description = "Domain for Kubernetes services (future external-dns use)"
+  type        = string
+  default     = "k8s.home.lab"
+}
